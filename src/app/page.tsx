@@ -1,14 +1,12 @@
 "use client";
-import { Link } from "@chakra-ui/next-js";
+
+import { Box } from "@chakra-ui/react";
+import { Signin } from "./signin/page";
 
 export default function Home() {
   return (
-    <div>
-      <div className="bg-[#FFF9DC] h-[100vh]">
-        <Link href="/about" color="blue.400" _hover={{ color: "blue.500" }}>
-          About
-        </Link>
-      </div>
-    </div>
+    <Box bg="#141414" w="100%" h="100vh" p={4} color="white">
+      <Signin />
+    </Box>
   );
 }
