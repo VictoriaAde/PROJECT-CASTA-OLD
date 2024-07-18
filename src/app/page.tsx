@@ -3,10 +3,12 @@ import { useState } from "react";
 import { LoginWindow } from "@/components/login-window";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
-import { useFarcasterIdentity } from "../../utils/use-farcaster-identity";
+import { useFarcasterIdentity } from "@/utils/use-farcaster-identity";
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default function Page({}: {
+  searchParams: Record<string, string>;
+}): JSX.Element {
   const [open, setOpen] = useState(false);
 
   const { farcasterUser, loading, startFarcasterSignerProcess, logout } =

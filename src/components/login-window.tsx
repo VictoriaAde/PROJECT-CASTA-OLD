@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Terms } from "./terms";
 import Link from "next/link";
-import { FarcasterUser } from "../../utils/types/farcaster-user";
+import { FarcasterUser } from "@/utils/types/farcaster-user";
 
 export const LoginWindow = ({
   farcasterUser,
@@ -54,7 +54,7 @@ export const LoginWindow = ({
                   value={farcasterUser.signerApprovalUrl}
                   size={200}
                 />
-                <h2 className="text-2xl font-bold">Use link below on mobile</h2>
+                <h2 className="text-3xl font-bold">Use link below on mobile</h2>
                 <Button asChild className="w-full">
                   <Link
                     href={farcasterUser.signerApprovalUrl}
