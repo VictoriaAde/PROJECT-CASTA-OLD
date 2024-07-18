@@ -3,7 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { Righteous as Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-// import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import { cn } from "@/lib/utils";
 
@@ -19,9 +19,8 @@ const fontDisplay = Display({
 });
 
 export const metadata: Metadata = {
-  title: "Photocaster",
-  description:
-    "A photographer focused Farcaster client supporting high res images",
+  title: "CASTA",
+  description: "A Farcaster client",
   // openGraph: {
   //   title: "Photocaster",
   //   description:
@@ -68,7 +67,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          {/* <Analytics /> */}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
